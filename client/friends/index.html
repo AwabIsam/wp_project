@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../global.css">
+    <script src="../auth/index.js"></script>
+    <script src="onload.js"></script>
+    <title>Friends</title>
+</head>
+
+<body>
+    <div class="main-nav">
+        <div class="profile">
+            <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_24_7)">
+                    <rect width="60" height="60" rx="30" fill="#9C9CA8" />
+                    <path
+                        d="M30 39.78C37.6022 39.78 43.77 33.6122 43.77 26.01C43.77 18.4078 37.6022 12.24 30 12.24C22.3978 12.24 16.23 18.4078 16.23 26.01C16.23 33.6122 22.3978 39.78 30 39.78ZM42.24 42.84H36.9711C34.8482 43.8154 32.4863 44.37 30 44.37C27.5138 44.37 25.1614 43.8154 23.029 42.84H17.76C10.9993 42.84 5.52002 48.3193 5.52002 55.08V56.61C5.52002 59.1441 7.57596 61.2 10.11 61.2H49.89C52.4241 61.2 54.48 59.1441 54.48 56.61V55.08C54.48 48.3193 49.0007 42.84 42.24 42.84Z"
+                        fill="#1E3042" />
+                </g>
+                <defs>
+                    <clipPath id="clip0_24_7">
+                        <rect width="60" height="60" rx="30" fill="white" />
+                    </clipPath>
+                </defs>
+            </svg>
+        </div>
+        <div class="search-bar-container-friends">
+            <input id="searchTerm" type="text" placeholder="Find Friends" class="search-bar-friends">
+            <button id="search_icon_friends">
+                <i class="fas fa-search search-icon-friends"></i>
+            </button>
+            <div id="search-results-friends" class="hidden">
+
+            </div>
+        </div>
+        <button id="logout" type="button">Logout</button>
+    </div>
+    <main style="width: 100%;">
+
+        <aside class="sidebar">
+            <a href="/website/wp_project/client/friends">
+                <div class="search-bar-container">
+                    <div class="search-bar">
+                        Find friends
+                    </div>
+                    <button id="search-icon" class="search-icon">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="/website/wp_project/client/dashboard"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="/website/wp_project/client/friends"><i class="fas fa-user-friends"></i> Friends</a>
+                    </li>
+                    <li>
+                        <button id="route_to_admin">
+                            <i class="fas fa-cogs"></i>
+                            <div style="display: flex; flex-direction: column;">
+                                <div>
+                                    Admin Controls
+                                </div>
+                                <p style="color: #f00;" id="admin_err_message"></p>
+                            </div>
+                        </button>
+                    </li>
+                    <li><a href="/website/wp_project/client/about"><i class="fas fa-info-circle"></i> About</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <section class="main-content">
+            <div class="friends-section">
+                <div>
+                    <h2>Friends</h2>
+                    <p id="friends_err_msg"></p>
+                </div>
+                <div class="friends-lists-container">
+                    <div class="friends-list">
+                        <ul id="friends-list"></ul>
+                    </div>
+                    <div class="vertical-line"></div>
+                    <div class="friends-list">
+                        <ul id="users-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../auth/auth.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
